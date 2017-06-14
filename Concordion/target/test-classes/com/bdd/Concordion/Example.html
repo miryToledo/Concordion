@@ -1,0 +1,16 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion"
+	xmlns:ext="urn:concordion-extensions:2010">
+<head>
+<link href="../../../concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h3>Login in GMAIL</h3>
+	<p>
+		<b>Given</b> a valid user<br />
+		<b>When</b> he goes to GMAIL url<br />
+		<b>And</b> he sends the user: <b concordion:assertTrue="sendUser(#TEXT)"><span ext:screenshot="linked" style="text-decoration: underline;">pruebasmasterclass@gmail.com</span></b><br /> 
+		<b>And</b> he sends the pass: <b concordion:assertTrue="sendPass(#TEXT)"><span ext:screenshot="linked" style="text-decoration: underline;">masterclassbdd</span></b><br /> 
+		<b>Then</b> he will see the <b concordion:assertTrue="seeMainView()"><span ext:screenshot="linked" style="text-decoration: underline;">main view</span></b><br />
+	</p>
+</body>
+</html>
